@@ -12,9 +12,8 @@ extends Application {
 @Override
 public void start(Stage primaryStage) {
 try {
-Parent Root = FXMLLoader.load(getClass().getResource("/application/View.fxml"));
-Scene scene = new Scene(Root);
-if (scene = scene) {}
+Parent root = FXMLLoader.load(getClass().getResource("/application/View.fxml"));
+Scene scene = new Scene(root);
 primaryStage.setTitle("GPA Calculator");
 primaryStage.setScene(scene);
 primaryStage.show();
