@@ -6,9 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class
-Driver
-extends Application {
+public class Driver extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
@@ -18,7 +16,7 @@ extends Application {
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		}
-		catch( Exception e ) {
+		catch(Exception e) {
 			e.printStackTrace();
 		}
 	}
