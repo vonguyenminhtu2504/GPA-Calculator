@@ -31,7 +31,7 @@ public class Model {
 	public void calculateGPA() {
 		double numberSemesterHours = 0.0;
 		double totalClassPoints = 0.0;
-		double gradeScaled=0.0;
+		double gradeScaled;
 		int classHours = 0;
 		String grade = "";
 
