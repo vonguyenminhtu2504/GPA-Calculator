@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b8cf263-0572-4d78-85dc-a06ac509c53b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/application/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/application/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/application/Driver.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/application/Driver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/application/Model.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/application/Model.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sonar-project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/sonar-project.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller_original.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Driver_original.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model_original.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Model.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,11 +23,15 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="24Gc2ifkpUKj0AUVOsHQmSruwCX" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -46,11 +49,25 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1643260403742</updated>
-      <workItem from="1643260406994" duration="3528000" />
+      <workItem from="1643260406994" duration="4152000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

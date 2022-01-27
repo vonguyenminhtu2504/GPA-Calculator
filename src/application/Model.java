@@ -170,12 +170,6 @@ public class Model {
 		this.numberOfSemesters++;
 	}
 
-	public void removeRowData(int index)
-	{
-		listOfCredits.remove(listOfCredits.get(index));
-		listOfGrades.remove(listOfGrades.get(index));
-	}
-
 	public void clearData()
 	{
 		listOfCredits.clear();
