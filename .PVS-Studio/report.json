@@ -1,0 +1,178 @@
+{
+  "version": 2,
+  "warnings": [
+    {
+      "code": "V6030",
+      "cwe": 691,
+      "level": 2,
+      "positions": [
+        {
+          "file": "|?|/src/application/Controller.java",
+          "line": 344,
+          "endLine": 344,
+          "column": 67,
+          "endColumn": 97,
+          "navigation": {
+            "previousLine": 203089,
+            "currentLine": 225630252,
+            "nextLine": 203089,
+            "columns": 99
+          }
+        }
+      ],
+      "message": "The method located to the right of the \u0027|\u0027 operator will be called regardless of the value of the left operand. Perhaps, it is better to use \u0027||\u0027.",
+      "projects": [],
+      "favorite": false,
+      "falseAlarm": false
+    },
+    {
+      "code": "V6022",
+      "cwe": 0,
+      "sastId": "CERT-MSC56-J",
+      "level": 2,
+      "positions": [
+        {
+          "file": "|?|/src/application/Controller.java",
+          "line": 86,
+          "endLine": 86,
+          "column": 40,
+          "endColumn": 40,
+          "navigation": {
+            "previousLine": 1926,
+            "currentLine": 1469847677,
+            "nextLine": 1690434412,
+            "columns": 43
+          }
+        }
+      ],
+      "message": "Parameter \u0027e\u0027 is not used inside method body.",
+      "projects": [],
+      "favorite": false,
+      "falseAlarm": false
+    },
+    {
+      "code": "V6022",
+      "cwe": 0,
+      "sastId": "CERT-MSC56-J",
+      "level": 2,
+      "positions": [
+        {
+          "file": "|?|/src/application/Controller.java",
+          "line": 197,
+          "endLine": 197,
+          "column": 39,
+          "endColumn": 39,
+          "navigation": {
+            "previousLine": 1926,
+            "currentLine": 456346459,
+            "nextLine": 123,
+            "columns": 40
+          }
+        }
+      ],
+      "message": "Parameter \u0027e\u0027 is not used inside method body.",
+      "projects": [],
+      "favorite": false,
+      "falseAlarm": false
+    },
+    {
+      "code": "V6008",
+      "cwe": 476,
+      "sastId": "CERT-EXP01-J",
+      "level": 1,
+      "positions": [
+        {
+          "file": "|?|/src/application/Controller.java",
+          "line": 236,
+          "endLine": 236,
+          "column": 36,
+          "endColumn": 39,
+          "navigation": {
+            "previousLine": 0,
+            "currentLine": -338123338,
+            "nextLine": 0,
+            "columns": 55
+          }
+        }
+      ],
+      "message": "Dereference of \u0027null\u0027.",
+      "projects": [],
+      "favorite": false,
+      "falseAlarm": false
+    },
+    {
+      "code": "V6030",
+      "cwe": 691,
+      "level": 2,
+      "positions": [
+        {
+          "file": "|?|/src/application/Controller.java",
+          "line": 342,
+          "endLine": 342,
+          "column": 61,
+          "endColumn": 91,
+          "navigation": {
+            "previousLine": 803313633,
+            "currentLine": 298301070,
+            "nextLine": 203089,
+            "columns": 93
+          }
+        }
+      ],
+      "message": "The method located to the right of the \u0027\u0026\u0027 operator will be called regardless of the value of the left operand. Perhaps, it is better to use \u0027\u0026\u0026\u0027.",
+      "projects": [],
+      "favorite": false,
+      "falseAlarm": false
+    },
+    {
+      "code": "V6022",
+      "cwe": 0,
+      "sastId": "CERT-MSC56-J",
+      "level": 2,
+      "positions": [
+        {
+          "file": "|?|/src/application/Controller.java",
+          "line": 126,
+          "endLine": 126,
+          "column": 34,
+          "endColumn": 34,
+          "navigation": {
+            "previousLine": 1926,
+            "currentLine": 1082853765,
+            "nextLine": 123,
+            "columns": 35
+          }
+        }
+      ],
+      "message": "Parameter \u0027e\u0027 is not used inside method body.",
+      "projects": [],
+      "favorite": false,
+      "falseAlarm": false
+    },
+    {
+      "code": "V6022",
+      "cwe": 0,
+      "sastId": "CERT-MSC56-J",
+      "level": 2,
+      "positions": [
+        {
+          "file": "|?|/src/application/Controller.java",
+          "line": 169,
+          "endLine": 169,
+          "column": 40,
+          "endColumn": 40,
+          "navigation": {
+            "previousLine": 1926,
+            "currentLine": 53693443,
+            "nextLine": 123,
+            "columns": 41
+          }
+        }
+      ],
+      "message": "Parameter \u0027e\u0027 is not used inside method body.",
+      "projects": [],
+      "favorite": false,
+      "falseAlarm": false
+    }
+  ]
+}

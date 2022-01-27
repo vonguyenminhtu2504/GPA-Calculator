@@ -17,9 +17,9 @@ public class Model {
 	private XYChart.Series<String, Double> series = new XYChart.Series<String, Double>();
 	private ArrayList<Integer> listOfCredits = new ArrayList<Integer>();
 	private ArrayList<String> listOfGrades = new ArrayList<String>();
-	private int numberOfRows = 3;
-	private int numberOfSemesters = 1;
-	private boolean isSaved = false;
+	int numberOfRows = 3;
+	int numberOfSemesters = 1;
+	boolean isSaved = false;
 	private double totalCreditPoints = 0.0;
 	private double totalGradePoints = 0.0;
 	private int[] pieData = new int[5];
@@ -31,7 +31,7 @@ public class Model {
 	public void calculateGPA() {
 		double numberSemesterHours = 0.0;
 		double totalClassPoints = 0.0;
-		double gradeScaled=0.0;
+		double GradeScaled=0.0;
 		int classHours = 0;
 		String grade = "";
 
@@ -40,68 +40,73 @@ public class Model {
 			numberSemesterHours += classHours;
 			grade = listOfGrades.get(i);
 
-			if(grade.equals("A+") || grade.equals("A"))
-			{
-				gradeScaled = 4.0;
-				pieData[0] = pieData[0]+1;
-			}
-			else if(grade.equals("A-"))
-			{
-				gradeScaled = 3.7;
-				pieData[0] = pieData[0]+1;
-			}
-			else if(grade.equals("B+"))
-			{
-				gradeScaled = 3.3;
-				pieData[1] = pieData[1]+1;
-			}
-			else if(grade.equals("B"))
-			{
-				gradeScaled = 3.0;
-				pieData[1] = pieData[1]+1;
-			}
-			else if(grade.equals("B-"))
-			{
-				gradeScaled = 2.7;
-				pieData[1] = pieData[1]+1;
-			}
-			else if(grade.equals("C+"))
-			{
-				gradeScaled = 2.3;
-				pieData[2] = pieData[2]+1;
-			}
-			else if(grade.equals("C"))
-			{
-				gradeScaled = 2.0;
-				pieData[2] = pieData[2]+1;
-			}
-			else if(grade.equals("C-"))
-			{
-				gradeScaled = 1.7;
-				pieData[2] = pieData[2]+1;
-			}
-			else if(grade.equals("D+"))
-			{
-				gradeScaled = 1.3;
-				pieData[3] = pieData[3]+1;
-			}
-			else if(grade.equals("D"))
-			{
-				gradeScaled = 1.0;
-				pieData[3] = pieData[3]+1;
-			}
-			else if(grade.equals("D-"))
-			{
-				gradeScaled = 0.7;
-				pieData[3] = pieData[3]+1;
-			}
-			else if(grade.equals("F"))
-			{
-				gradeScaled = 0.0;
-				pieData[4] = pieData[4]+1;
-			}
+if(grade.equals("A+"))
+{
+	GradeScaled = 4.0;
+	pieData[0] = pieData[0]+1;
+}
+else if(grade.equals("A"))
+{
+	GradeScaled = 4.0;
+	pieData[0] = pieData[0]+1;
+}
+else if(grade.equals("A-"))
+{
+	GradeScaled = 3.7;
+	pieData[0] = pieData[0]+1;
+}
+else if(grade.equals("B+"))
+{
+	GradeScaled = 3.3;
+	pieData[1] = pieData[1]+1;
+}
+else if(grade.equals("B"))
+{
+	GradeScaled = 3.0;
+	pieData[1] = pieData[1]+1;
+}
+else if(grade.equals("B-"))
+{
+	GradeScaled = 2.7;
+	pieData[1] = pieData[1]+1;
+}
+else if(grade.equals("C+"))
+{
+	GradeScaled = 2.3;
+	pieData[2] = pieData[2]+1;
+}
+else if(grade.equals("C"))
+{
+	GradeScaled = 2.0;
+	pieData[2] = pieData[2]+1;
+}
+else if(grade.equals("C-"))
+{
+	GradeScaled = 1.7;
+	pieData[2] = pieData[2]+1;
+}
+else if(grade.equals("D+"))
+{
+	GradeScaled = 1.3;
+	pieData[3] = pieData[3]+1;
+}
+else if(grade.equals("D"))
+{
+	GradeScaled = 1.0;
+	pieData[3] = pieData[3]+1;
+}
+else if(grade.equals("D-"))
+{
+	GradeScaled = 0.7;
+	pieData[3] = pieData[3]+1;
+}
+else if(grade.equals("F"))
+{
+	GradeScaled = 0.0;
+	pieData[4] = pieData[4]+1;
+}
 
-			totalClassPoints += (classHours*gradeScaled);
+			totalClassPoints += (classHours*GradeScaled);
 		}
 
 		totalGradePoints += totalClassPoints;
@@ -114,6 +119,7 @@ public class Model {
 	public void setSeries(double gpaType)
 	{
 		series.getData().add(new XYChart.Data<String, Double>("Semester " + numberOfSemesters, gpaType));
+		return;
 	}
 
 	public Series<String,Double> getSeries()
@@ -138,23 +144,29 @@ public class Model {
 
 		NumberFormat formatter = new DecimalFormat("#0.00");
 
-		return FXCollections.observableArrayList(new PieChart.Data("A  "+formatter.format(percents[0])+"%", pieData[0]), new PieChart.Data("B  "+formatter.format(percents[1])+"%", pieData[1]),
+		ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList(new PieChart.Data("A  "+formatter.format(percents[0])+"%", pieData[0]), new PieChart.Data("B  "+formatter.format(percents[1])+"%", pieData[1]),
 				new PieChart.Data("C  "+formatter.format(percents[2])+"%", pieData[2]), new PieChart.Data("D  "+formatter.format(percents[3])+"%", pieData[3]), new PieChart.Data("F  "+formatter.format(percents[4])+"%", pieData[4]));
 
+		return pieChartData;
 	}
 
 	public void setCredits(ArrayList<TextField> listOfCredits)
 	{
 		this.listOfCredits.clear();
-		if(!listOfCredits.isEmpty())
+		if(listOfCredits.isEmpty())
+		{
+			return;
+		}
+		else
 		{
 			for (int i = 0; i < listOfCredits.size(); i++) {
-				if(!(listOfCredits.get(i).getText().equals("")) && (listOfCredits.get(i).getText() != null))
+				if(!(listOfCredits.get(i).getText().equals("")) && !(listOfCredits.get(i).getText() = null))
 				{
 					this.listOfCredits.add(Integer.parseInt(listOfCredits.get(i).getText()));
 				}
 			}
 		}
+		return;
 	}
 
 	public void setGradeList(ArrayList<ComboBox<String>> listOfGrades)
@@ -168,28 +180,33 @@ public class Model {
 	public void incrementSemesters()
 	{
 		this.numberOfSemesters++;
+		return;
 	}
 
 	public void removeRowData(int index)
 	{
 		listOfCredits.remove(listOfCredits.get(index));
 		listOfGrades.remove(listOfGrades.get(index));
+		return;
 	}
 
 	public void clearData()
 	{
 		listOfCredits.clear();
 		listOfGrades.clear();
+		return;
 	}
 
 	public void setCumGpa(double cumGpa)
 	{
 		this.cumGpa = cumGpa;
+		return;
 	}
 
 	public void setCurrGPA(double currGpa)
 	{
 		this.currGpa = currGpa;
+		return;
 	}
 
 	public void setNumOfRows(int numOfRows)
@@ -200,11 +217,15 @@ public class Model {
 	public void setSaved(boolean flag)
 	{
 		this.isSaved = flag;
+		return;
 	}
 
 	public boolean isSaved()
 	{
-		return this.isSaved;
+		if (this.isSaved == true) {
+			return true;
+		}
+		return false;
 	}
 
 	public double getCurrGpa()
