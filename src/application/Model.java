@@ -101,13 +101,11 @@ public class Model {
 		setCurrGPA(Math.round(totalClassPoints/numberSemesterHours * 100.0) / 100.0);
 	}
 
-	public void setSeries(double gpaType)
-	{
+	public void setSeries(double gpaType) {
 		series.getData().add(new XYChart.Data<String, Double>("Semester " + numberOfSemesters, gpaType));
 	}
 
-	public Series<String,Double> getSeries()
-	{
+	public Series<String,Double> getSeries() {
 		return series;
 	}
 
@@ -115,14 +113,12 @@ public class Model {
 	{
 		isSaved = true;
 
-		for(int i = 0; i<pieData.length; i++)
-		{
+		for(int i = 0; i<pieData.length; i++) {
 			totalGrades = totalGrades + pieData[i];
 		}
 
 		double[] percents = new double[5];
-		for(int k = 0; k<percents.length; k++)
-		{
+		for(int k = 0; k<percents.length; k++) {
 			percents[k]=(100.0*pieData[k]/totalGrades);
 		}
 
@@ -133,11 +129,9 @@ public class Model {
 
 	}
 
-	public void setCredits(ArrayList<TextField> listOfCredits)
-	{
+	public void setCredits(ArrayList<TextField> listOfCredits) {
 		this.listOfCredits.clear();
-		if(!listOfCredits.isEmpty())
-		{
+		if(!listOfCredits.isEmpty()) {
 			for (int i = 0; i < listOfCredits.size(); i++) {
 				if(!(listOfCredits.get(i).getText().equals("")) && (listOfCredits.get(i).getText() != null))
 				{
@@ -147,62 +141,51 @@ public class Model {
 		}
 	}
 
-	public void setGradeList(ArrayList<ComboBox<String>> listOfGrades)
-	{
+	public void setGradeList(ArrayList<ComboBox<String>> listOfGrades) {
 		this.listOfGrades.clear();
 		for(int i = 0; i < listOfGrades.size(); i++) {
 			this.listOfGrades.add(listOfGrades.get(i).getValue());
 		}
 	}
 
-	public void incrementSemesters()
-	{
+	public void incrementSemesters() {
 		this.numberOfSemesters++;
 	}
 
-	public void clearData()
-	{
+	public void clearData() {
 		listOfCredits.clear();
 		listOfGrades.clear();
 	}
 
-	public void setCumGpa(double cumGpa)
-	{
+	public void setCumGpa(double cumGpa) {
 		this.cumGpa = cumGpa;
 	}
 
-	public void setCurrGPA(double currGpa)
-	{
+	public void setCurrGPA(double currGpa) {
 		this.currGpa = currGpa;
 	}
 
-	public void setNumOfRows(int numOfRows)
-	{
+	public void setNumOfRows(int numOfRows) {
 		numberOfRows = numOfRows;
 	}
 
-	public void setSaved(boolean flag)
-	{
+	public void setSaved(boolean flag) {
 		this.isSaved = flag;
 	}
 
-	public boolean isSaved()
-	{
+	public boolean isSaved() {
 		return this.isSaved;
 	}
 
-	public double getCurrGpa()
-	{
+	public double getCurrGpa() {
 		return currGpa;
 	}
 
-	public int getNumOfRows()
-	{
+	public int getNumOfRows() {
 		return numberOfRows;
 	}
 
-	public double getCumGpa()
-	{
+	public double getCumGpa() {
 		return cumGpa;
 	}
 }
