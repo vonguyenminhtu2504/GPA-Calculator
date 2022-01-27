@@ -40,67 +40,6 @@ public class Model {
 			numberSemesterHours += classHours;
 			grade = listOfGrades.get(i);
 
-//			if(grade.equals("A+") || grade.equals("A"))
-//			{
-//				gradeScaled = 4.0;
-//				pieData[0] = pieData[0]+1;
-//			}
-//			else if(grade.equals("A-"))
-//			{
-//				gradeScaled = 3.7;
-//				pieData[0] = pieData[0]+1;
-//			}
-//			else if(grade.equals("B+"))
-//			{
-//				gradeScaled = 3.3;
-//				pieData[1] = pieData[1]+1;
-//			}
-//			else if(grade.equals("B"))
-//			{
-//				gradeScaled = 3.0;
-//				pieData[1] = pieData[1]+1;
-//			}
-//			else if(grade.equals("B-"))
-//			{
-//				gradeScaled = 2.7;
-//				pieData[1] = pieData[1]+1;
-//			}
-//			else if(grade.equals("C+"))
-//			{
-//				gradeScaled = 2.3;
-//				pieData[2] = pieData[2]+1;
-//			}
-//			else if(grade.equals("C"))
-//			{
-//				gradeScaled = 2.0;
-//				pieData[2] = pieData[2]+1;
-//			}
-//			else if(grade.equals("C-"))
-//			{
-//				gradeScaled = 1.7;
-//				pieData[2] = pieData[2]+1;
-//			}
-//			else if(grade.equals("D+"))
-//			{
-//				gradeScaled = 1.3;
-//				pieData[3] = pieData[3]+1;
-//			}
-//			else if(grade.equals("D"))
-//			{
-//				gradeScaled = 1.0;
-//				pieData[3] = pieData[3]+1;
-//			}
-//			else if(grade.equals("D-"))
-//			{
-//				gradeScaled = 0.7;
-//				pieData[3] = pieData[3]+1;
-//			}
-//			else
-//			{
-//				gradeScaled = 0.0;
-//				pieData[4] = pieData[4]+1;
-//			}
-
 			switch(grade) {
 				case "A+":
 				case "A":
